@@ -70,5 +70,12 @@ stage(" Docker Build ") {
             }
         }
     }
+    stage(" Deploy ") {
+       steps {
+         script {
+            sh './deploy.sh'
+         }
+       }
+     }
 }        
 }
